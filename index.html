@@ -29,7 +29,7 @@
       --rsm:      8px;
       --ease:     cubic-bezier(0.4,0,0.2,1);
     }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; font-size: 112%; }
     body {
       background: var(--bg);
       color: var(--text);
@@ -196,20 +196,20 @@
       margin-bottom: 13px;
     }
     .tcard-art {
-      width: 100%;
+      width: 55%;
       aspect-ratio: 1;
       border-radius: 10px;
       object-fit: cover;
-      margin-bottom: 14px;
+      margin: 0 auto 14px;
       background: var(--s2);
       display: block;
     }
     .tcard-art-ph {
-      width: 100%;
+      width: 55%;
       aspect-ratio: 1;
       border-radius: 10px;
       background: var(--s2);
-      margin-bottom: 14px;
+      margin: 0 auto 14px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -273,7 +273,8 @@
     }
     .bar-space { flex: 1; display: flex; align-items: flex-end; width: 100%; }
     .bar {
-      width: 100%;
+      width: 60%;
+      margin: 0 auto;
       background: var(--red);
       border-radius: 4px 4px 0 0;
       min-height: 3px;
@@ -630,8 +631,8 @@
 
   <!-- ── Period ─────────────────────────────────────────────────── -->
   <div class="period-row" id="period-row">
-    <button class="pbtn" data-p="7day">7 Days</button>
-    <button class="pbtn active" data-p="1month">1 Month</button>
+    <button class="pbtn active" data-p="7day">7 Days</button>
+    <button class="pbtn" data-p="1month">1 Month</button>
     <button class="pbtn" data-p="6month">6 Months</button>
     <button class="pbtn" data-p="12month">12 Months</button>
     <button class="pbtn" data-p="overall">All Time</button>
@@ -735,7 +736,7 @@ const LFM_KEY  = '92a8f3a946bef62c6597480d8243dd62';
 const LFM_USER = 'awmenges1990';
 const LFM_BASE = 'https://ws.audioscrobbler.com/2.0/';
 
-let period   = '1month';
+let period   = '7day';
 let tab      = 'artists';
 let loading  = false;
 
@@ -820,7 +821,7 @@ function renderTopGridSkel() {
   g.innerHTML = Array(3).fill(`
     <div class="tcard">
       <div class="sk" style="height:13px;width:55px;margin-bottom:14px;"></div>
-      <div class="sk" style="width:100%;aspect-ratio:1;border-radius:10px;margin-bottom:14px;"></div>
+      <div class="sk" style="width:55%;aspect-ratio:1;border-radius:10px;margin:0 auto 14px;"></div>
       <div class="sk" style="height:22px;margin-bottom:7px;"></div>
       <div class="sk" style="height:13px;width:65%;margin-bottom:9px;"></div>
       <div class="sk" style="height:11px;width:38%;"></div>
@@ -1156,6 +1157,6 @@ setInterval(() => { loadRecent(); loadUser(); }, 60000);
 
 // Boot
 loadAll();
-</script>
+</script> 
 </body>
 </html>
