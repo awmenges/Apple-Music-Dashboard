@@ -59,3 +59,18 @@ python -m http.server 8080
 - Hosted on **Vercel** at https://apple-music-dashboard.vercel.app/
 - **Workflow**: develop on a feature branch → push to `testing` branch for review → merge to `main` for production
 - Push to `main` → Vercel auto-deploys. No build command needed — Vercel serves static files as-is
+
+## Current Status (as of 2026-05-13)
+The `testing` branch has a completed but **not yet reviewed** Habits page (page 2). The user has edits they want to make to it before merging to `main`.
+
+**What's on `testing` that isn't on `main` yet:**
+- Page navigation in the header ("Top Music" / "Habits" pill buttons)
+- Habits page with 4 sections:
+  1. This-period vs last-period play count comparison card
+  2. Activity over time bar chart (auto-granularity per period)
+  3. Day-of-week average plays bar chart (Mon–Sun)
+  4. 7×24 day/hour heatmap with red intensity scale
+- In-session scrobble cache (`habitsCache`) keyed by period
+- `CLAUDE.md` (this file)
+
+**Next session:** the user wants to make edits to the Habits page design/content before merging. Start by asking what changes they have in mind, then work on the `testing` branch.
